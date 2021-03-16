@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <form method='post'>
+    {% csrf_token %}
+    <h4>¿Esta seguro de eliminar los datos de {{object.nombre}}?</h4>
+    <button class="btn btn-alert" type="submit">Si, eliminar</button>
+    <a class="btn btn-default" href="{% url 'mascota_listar' %}">Cancelar</a>
+</form>
+{% endblock  %}
